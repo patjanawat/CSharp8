@@ -1,6 +1,20 @@
 ﻿using customer_relationship;
 using Asynchronous_sample;
+using AnimalNameGroup;
 
+//Record
+Animal animal= new ("king","kong");
+Console.WriteLine(@$"{animal.firstName} {animal.lastName} Family.");
+
+Machine machine1 = new("Nancy","Davolio"){phoneNumbers = new string[1]};
+Console.WriteLine(@$"{machine1.firstName} {machine1.lastName} {machine1.phoneNumbers}.");
+
+Machine machine2 = machine1 with {firstName = "King"};
+Console.WriteLine(@$"{machine2.firstName} {machine2.lastName} {machine2.phoneNumbers}.");
+
+Machine machine3 = machine1 with {lastName = "ajai",phoneNumbers = new string[2]{"A","B"}};
+Console.WriteLine(@$"{machine3.firstName} {machine3.lastName} {machine3.phoneNumbers}.");
+/*
 SampleCustomer c = new SampleCustomer("customer one", new DateTime(2010, 5, 31))
 {
     Reminders =
@@ -101,6 +115,19 @@ string[] words = new string[]
 };
 var allWords = words[..];
 
+//Null coalescing operator ??=
+List<int> numbers = null;
+
+(numbers??= new List<int>()).Add(5);
+Console.WriteLine(string.Join(" ",numbers));
+
+int? aka = null;
+numbers.Add(aka ??= 0);
+Console.WriteLine(string.Join(" ", numbers));
+Console.WriteLine(a);
+
+
+
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-
+*/
