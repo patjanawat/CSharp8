@@ -2,8 +2,33 @@
 using Asynchronous_sample;
 using AnimalNameGroup;
 
+using VarPatternNamespace;
+Console.WriteLine(VarPattern.Transform(new Point(1,2)));
+Console.WriteLine(VarPattern.Transform(new Point(5,2)));
+Console.WriteLine(VarPattern.Transform(new Point(5,5)));
+/*
+using   RelationPatternNamespace;
+Console.WriteLine(RelationPattern.Classtify(99));
+*/
+/*
+using TypePatternNamespace;
+
+Truck big = new Truck();
+Console.WriteLine(big.CalculateToll());
+*/
+
+//Declaretion and type patterns
+/*Console.WriteLine("Declaretion and type patterns");
+int? xNullable = 7;
+int y = 23;
+object yboxed = y;
+if(xNullable is int a && yboxed is int b)
+{
+    Console.WriteLine(a + b);
+}*/
+
 //Record
-Animal animal= new ("king","kong");
+/*Animal animal= new ("king","kong");
 Console.WriteLine(@$"{animal.firstName} {animal.lastName} Family.");
 
 Machine machine1 = new("Nancy","Davolio"){phoneNumbers = new string[1]};
@@ -14,6 +39,7 @@ Console.WriteLine(@$"{machine2.firstName} {machine2.lastName} {machine2.phoneNum
 
 Machine machine3 = machine1 with {lastName = "ajai",phoneNumbers = new string[2]{"A","B"}};
 Console.WriteLine(@$"{machine3.firstName} {machine3.lastName} {machine3.phoneNumbers}.");
+*/
 /*
 SampleCustomer c = new SampleCustomer("customer one", new DateTime(2010, 5, 31))
 {
